@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9289c1dc-8f98-48e8-b59b-9fcddddc1340" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/choice/java/ExploreConnGit.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip!/java/nio/Buffer.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip!/java/nio/ByteBuffer.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip!/java/nio/channels/SelectableChannel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip!/java/nio/channels/Selector.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip!/java/nio/channels/spi/AbstractSelectableChannel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/src.zip!/java/nio/channels/spi/SelectorProvider.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-buffer/4.1.86.Final/netty-buffer-4.1.86.Final-sources.jar!/io/netty/buffer/AbstractByteBuf.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-buffer/4.1.86.Final/netty-buffer-4.1.86.Final-sources.jar!/io/netty/buffer/ByteBuf.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/bootstrap/ServerBootstrap.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/channel/AbstractChannel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/channel/ChannelInitializer.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/channel/DefaultChannelPipeline.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/channel/nio/AbstractNioChannel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-transport/4.1.86.Final/netty-transport-4.1.86.Final-sources.jar!/io/netty/channel/nio/NioEventLoop.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="$USER_HOME$/Software/maven/Repository" />
+        <option name="mavenHome" value="$USER_HOME$/Software/maven/apache-maven-3.8.7" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="$USER_HOME$/Software/maven/apache-maven-3.8.7/conf/settings_zto_kuaiyun.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2P9Tl0BIHpHrBGRg9VehyCDwX7t" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/huangweihan/Study/code/netty&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/choice/netty/tcp/solve/fixedlengthframedecoder" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/choice/netty" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/choice/nio/channel" />
+      <recent name="$PROJECT_DIR$/src/main/resources/nio/channel" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.choice.netty.serialization.messagepack" />
+      <recent name="com.choice.netty.tcp.solve.fixedlengthframedecoder" />
+      <recent name="com.choice.netty.tcp.solve3" />
+      <recent name="com.choice.netty.heartbeat" />
+      <recent name="com.choice.netty.task" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ExploreClassThisUsage">
+    <configuration name="EchoClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.choice.netty.soucecode.EchoClient" />
+      <module name="netty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EchoClientDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.choice.netty.tcp.solve.fixedlengthframedecoder.EchoClientDemo" />
+      <module name="netty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EchoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.choice.netty.soucecode.EchoServer" />
+      <module name="netty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EchoServerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.choice.netty.tcp.solve.fixedlengthframedecoder.EchoServerDemo" />
+      <module name="netty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExploreClassThisUsage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.choice.java.ExploreClassThisUsage" />
+      <module name="netty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ExploreClassThisUsage" />
+        <item itemvalue="Application.EchoClientDemo" />
+        <item itemvalue="Application.EchoServerDemo" />
+        <item itemvalue="Application.EchoServer" />
+        <item itemvalue="Application.EchoClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9289c1dc-8f98-48e8-b59b-9fcddddc1340" name="Changes" comment="" />
+      <created>1682868444885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682868444885</updated>
+      <workItem from="1682868445873" duration="18773000" />
+      <workItem from="1682932471423" duration="7562000" />
+      <workItem from="1682954138497" duration="24270000" />
+      <workItem from="1683114256230" duration="10758000" />
+      <workItem from="1683170433462" duration="1124000" />
+      <workItem from="1683181800769" duration="5325000" />
+      <workItem from="1683202658935" duration="8299000" />
+      <workItem from="1683252333579" duration="2264000" />
+      <workItem from="1683337429090" duration="13265000" />
+      <workItem from="1683363834670" duration="14000" />
+      <workItem from="1683364239729" duration="14000" />
+      <workItem from="1683364361594" duration="1803000" />
+      <workItem from="1683548548960" duration="600000" />
+      <workItem from="1683552652878" duration="2479000" />
+      <workItem from="1683698464722" duration="13517000" />
+      <workItem from="1683720048981" duration="1497000" />
+      <workItem from="1683787813092" duration="586000" />
+      <workItem from="1683876499209" duration="1296000" />
+      <workItem from="1683980963169" duration="10266000" />
+      <workItem from="1684066618094" duration="3971000" />
+      <workItem from="1684113776966" duration="1533000" />
+      <workItem from="1684140899355" duration="23000" />
+      <workItem from="1684158525441" duration="5233000" />
+      <workItem from="1684213664457" duration="29000" />
+      <workItem from="1684893550372" duration="773000" />
+      <workItem from="1685001496078" duration="17000" />
+      <workItem from="1685017998288" duration="1446000" />
+      <workItem from="1685083697450" duration="68000" />
+      <workItem from="1685099247997" duration="5000" />
+      <workItem from="1685329257637" duration="83000" />
+      <workItem from="1685430120674" duration="577000" />
+      <workItem from="1685430725432" duration="55000" />
+    </task>
+    <task id="LOCAL-00001" summary="第一次提交">
+      <created>1685430397399</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685430397399</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-codec/4.1.86.Final/netty-codec-4.1.86.Final-sources.jar!/io/netty/handler/codec/MessageToByteEncoder.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-codec/4.1.86.Final/netty-codec-4.1.86.Final-sources.jar!/io/netty/handler/codec/FixedLengthFrameDecoder.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-codec/4.1.86.Final/netty-codec-4.1.86.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java</url>
+          <line>449</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/Software/maven/Repository/io/netty/netty-codec/4.1.86.Final/netty-codec-4.1.86.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java</url>
+          <line>282</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
