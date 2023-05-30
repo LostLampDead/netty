@@ -1,0 +1,93 @@
+(1) Channel 的生命周期
+ChannelRegistered -> ChannelActive -> ChannelInactive -> ChannelUnregistered
+ChannelUnregistered: Channel已经被创建，但还未注册到EventLoop。
+ChannelRegistered: Channel已经被注册到了EventLoop。
+ChannelActive: Channel处于活动状态(已经连接到远程节点)。现在可以接收和发送数据。
+ChannelInactive: Channel没有连接到远程节点。
+
+(2) ChannelHandler 的生命周期
+handlerAdded: 当把 ChannelHandler 添加到 ChannelPipeline中时被调用。
+handlerRemoved: 当从 ChannelPipeline 中移除 ChannelHandler 时被调用。
+exceptionCaught: 当处理过程中在 ChannelPipeline 中有错误发生时被调用。
+
+- ChannelInboundHandler 处理入站数据以及各种状态
+- ChannelOutboundHandler 处理出站数据并且允许拦截所有的操作。
+
+(3) ChannelInboundHandler
+channelRegistered: 当Channel已经注册到EventLoop并且能够处理I/O时被调用。
+channelUnregistered: 当Channel从EventLoop注销并且无法处理任何I/O时被调用。
+channelActive: 当Channel处于活动状态时被调用；Channel已经连接/绑定并且已经就绪。
+channelInactive：当Channel离开活动状态并且不再连接远程节点时被调用。
+channelReadComplete: 当Channel上的一个读操作完成时被调用。
+channelRead: 当从Channel读取数据时被调用。
+channelWritability: 当Channel的可写状态发生改变时被调用。
+userEventTriggered: 当ChannnelInboundHandler.fireUserEventTriggered() 方法被调用时调用。
+
+SimpleChannelInbundHandler -> 自动释放资源
+
+(4) ChannelOutboundHandler
+以下是 ChannelOutboundHandler 本身的方法
+bind: 当请求将Channel绑定到本地地址。
+connect: 当请求将Channel连接到远程节点时被调用。
+disconnect: 当请求将Channel从远程节点断开时被调用。
+close: 当请求关闭Channel时被调用。
+deregister: 当请求将Channel从EventLoop注销时被调用。
+read: 当请求从Channel读取更多的数据时被调用。
+flush: 当请求通过Channel将入队数据冲刷到远程节点时被调用。
+write: 当请求通过Channel将数据写入到远程节点时被调用。
+
+(5) ChannelHandlerAdapter
+ChannelHandlerAdapter 是一个Netty中的Handler适配器类，它实现了ChannelHandler接口中的所有方法并提供了默认的实现。
+因此，使用ChannelHandlerAdapter作为Handler的基类可以减少代码量和简化Handler的实现。
+
+(6) ResourceLeakDetector - 诊断潜在的内存泄露问题
+在Netty中，内存泄露可能会出现在以下情况中：
+- 异步处理的任务过多或者未正确处理
+当Netty的异步任务积压过多或者没有正确处理时，可能会导致内存泄漏。例如，如果异步任务中没有适当地释放资源，那么这些资源就可能永远不会被回收。
+- 未正确释放ByteBuf对象
+在Netty中，ByteBuf是用于存储和处理数据的对象。如果在处理数据时没有正确释放ByteBuf对象，那么这些对象就会一直占用内存。
+- 未正确处理关闭连接
+如果在关闭连接时没有正确地释放资源，那么这些资源就可能永远不会被回收，导致内存泄漏。
+
+针对上述问题，可以采取以下措施避免内存泄漏：
+- 确保异步任务正确处理
+在处理异步任务时，应该确保在任务完成后适当地释放资源。可以使用Netty提供的一些回调方法，如ChannelFutureListener等来监听异步任务的完成情况，确保资源正确释放。
+- 确保正确释放ByteBuf对象
+在使用ByteBuf对象时，应该确保在不再使用对象时及时释放资源。可以使用ReferenceCountUtil类中的release()方法来释放ByteBuf对象，该方法会根据对象的引用计数自动判断是否需要释放对象。
+- 确保正确处理关闭连接
+在关闭连接时，应该确保释放所有与连接相关的资源。可以使用Netty提供的ChannelFutureListener.CLOSE等回调方法，在关闭连接后释放资源。
+
+泄露检测级别 -Dio.netty.leakDetectionLevel=ADVANCED
+- disabled: 禁用泄露检测。只有在详情测试后才应设置为这个值。
+- simple: 使用1%的默认采样率检测并报告任何发现的泄露。默认设置，适用于大部分情况。
+- advanced: 使用默认的采样率，报告所发现的任何的泄露以及对应消息被访问的位置。
+- paranoid: 类似于advanced，但是其将会对每次对消息的访问随机采用：这对性能会有很大影响，应该只在调试阶段进行。
+
+如果一个消息被消费或者丢弃了，并且没有传递给ChannelPipeline中的下一个ChannelOutboundHandler，
+那么用户就有责任调用ReferenceCountUtil.release()。 如果消息到达了实际的传输层，那么当它被写入时或者Channel关闭时，都将被自动释放。
+
+(7) ChannelPipeline
+ChannelPipeline -> ChannelHandler的实例链。
+ChannelHandlerContext 上下文交互，用于处理 Handler 之间的交互。
+
+ChannelPipeline 的入站操作
+- fireChannelRegistered: 调用ChannelPipeline中下一个ChannelInboundHandler的channelRegistered。
+- fireChannelUnregistered: 调用ChannelPipeline中下一个ChannelInboundHandler的channelUnregistered。
+- fireChannelActive: 调用ChannelPipeline中下一个ChannelInboundHandler的channelActive。
+- fireChannelInactive: 调用ChannelPipeline中下一个ChannelInboundHandler的channelInactive。
+- fireExceptionCaught: 调用ChannelPipeline中下一个ChannelInboundHandler的exceptionCaught。
+- fireUserEventTriggered: 调用ChannelPipeline中下一个ChannelInboundHandler的userEventTriggered。
+- fireChannelRead: 调用ChannelPipeline中下一个ChannelInboundHandler的channelRead。
+- fireChannelReadComplete: 调用ChannelPipeline中下一个ChannelInboundHandler的channelReadComplete。
+- fireChannelWritability: 调用ChannelPipeline中下一个ChannelInboundHandler的channelWritability。
+
+ChannelPipeline 的出站操作
+- bind: 将Channel绑定到一个本地地址，这将调用ChannelPipeline的下一个的ChannelOutboundHandler中的bind。
+- connect: 将Channel连接到一个远程地址，这将调用ChannelPipeline中的下一个的ChannelOutboundHandler的connect。
+- disconnect: 将Channel断开连接，这将调用ChannelPipeline中的下一个的ChannelOutboundHandler的disconnect。
+- close: 将Channel关闭，这将调用ChannelPipeline中的下一个的ChannelOutboundHandler的close。
+- deregister: 将Channel从先前所分配的EventExecutor中注销，这将调用ChannelPipeline中的下一个的ChannelOutboundHandler的deregistered。
+- flush: 冲刷Channel所有挂起的写入，这将调用ChannelPipeline中的下一个的ChannelOutboundHandler的flush。
+- write: 将消息写入到Channel，这将调用ChannelPipeline中的下一个的ChannelOutboundHandler的flush。
+注意这里还不会将消息写入到底层的Socket，而是放入队列中，如果需要写入Socket，需要执行flush或者writeAndFlush。
+
